@@ -31,7 +31,8 @@ jobs:
       run: mvn -B test
 
   qodana:
-    runs-on: ubuntu-latest
+  needs: build
+    runs-on:ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
